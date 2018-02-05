@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>YouTube Clone</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 text-center offset-md-3">
+        <h2><img src="assets/YouTube.png">(cloned, badly)</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 text-center offset-md-3">
+
+
+        <form>
+          <input size="70" type="text" placeholder="What video would you like to watch?"></input>
+          <button class="btn" type="button">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-6 offset-md-2 text-center">
+        <div class="video d-flex align-items-center justify-content-center">
+        <iframe width="480" height="270" src="http://www.youtube.com/embed/7lCDEYXw3mM" frameborder= "0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class=description>
+        <p> description goes here</p>
+      </div>
+      </div>
+
+      <div class="col-md-3 text-center offset-md-1 sidebar">
+        <div class="img-thumbnail sidebar-item">
+          <img class="img-fluid" src="https://i.ytimg.com/vi/7lCDEYXw3mM/hqdefault.jpg">
+        </div>
+        <div class="img-thumbnail sidebar-item">
+          <img class="img-fluid" src="https://i.ytimg.com/vi/7lCDEYXw3mM/hqdefault.jpg">
+        </div>
+        <div class="img-thumbnail sidebar-item">
+          <img class="img-fluid" src="https://i.ytimg.com/vi/7lCDEYXw3mM/hqdefault.jpg">
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/underscore/underscore-min.js"></script>
+  <script src="node_modules/backbone/backbone-min.js"></script>
+  <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script src="Models/VideoModel.js"></script>
+  <script src="Collections/VideoCollection.js"></script>
+  <script src="Models/AppModel.js"></script>
+  <script src="Views/SidebarView.js"></script>
+  <script src="Views/MainVideoView.js"></script>
+  <script src="Views/AppView.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

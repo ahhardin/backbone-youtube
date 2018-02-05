@@ -1,0 +1,16 @@
+div {
+  border: 1px solid red;
+}
+
+img {
+  width:100%
+}
+
+.video {
+  height: 50%;
+  width: 100%
+}
+
+.sidebar {
+  margin-top: 5px
+}
