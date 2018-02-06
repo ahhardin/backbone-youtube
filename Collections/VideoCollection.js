@@ -3,7 +3,6 @@ var VideoCollection = Backbone.Collection.extend({
   model: VideoModel,
 
   parse: function(response) {
-    models = response.items
-    return models
+    return response.items
   }
 });

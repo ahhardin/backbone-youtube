@@ -12,12 +12,12 @@
 <body>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6 text-center offset-md-3">
+      <div class="col-md-8 text-center offset-md-2">
         <h2><img class="header-img" src="assets/YouTube.png">(cloned, badly)</h2>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 text-center offset-md-3">
+      <div class="col-md-8 text-center offset-md-2">
 
 
         <form>
@@ -28,16 +28,18 @@
     </div>
 
     <div class="row mt-5">
-      <div class="col-md-6 offset-md-2 text-center">
-        <div class="video-container d-flex align-items-center justify-content-center">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/329xjDM7YaE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class=description-container>
-          <p> description goes here</p>
+      <div class="col-md-7 offset-md-1 text-center">
+        <div class="video-container text-center">
+          <div class="video">
+            <iframe width="470" height="270" src="https://www.youtube.com/embed/329xjDM7YaE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="description">
+            <p> description goes here</p>
+          </div>
         </div>
       </div>
 
-      <div class="col-md-3 text-center offset-md-1 sidebar-container">
+      <div class="col-md-4 text-center sidebar-container">
         <div class="img-thumbnail sidebar-item">
           <img class="img-fluid" src="https://i.ytimg.com/vi/QJO3ROT-A4E/hqdefault.jpg">
         </div>
@@ -53,6 +55,23 @@
     </div>
 
   </div>
+
+  <script id="video-template" type="text/x-handlebars-template">
+    <div class="video text-center">
+      <iframe width="500" height="320" src="https://www.youtube.com/embed/{{video_id}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+    </div>
+    <div class="description">
+      <h5>{{title}}</h5>
+      <p class="text-left">{{description}}<button type="button" class="btn read-more">Read More</button></p>
+    </div>
+  </script>
+
+  <script id="sidebar-template" type="text/x-handlebars-template">
+      <div class="row">
+        <div class="col-sm-6"><img class="img-fluid" src={{thumbnail}}></div>
+        <div class="col-sm-6">{{title}}</div>
+      </div>
+  </script>
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/underscore/underscore-min.js"></script>
