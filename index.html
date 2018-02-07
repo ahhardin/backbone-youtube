@@ -26,7 +26,7 @@
     </div>
 
     <div class="row mt-5">
-      <div class="col-md-7 offset-md-1 text-center">
+      <div class="col-md-6 offset-md-0 col-xl-6 offset-xl-1 text-center">
         <!-- Where the main video and its description will live  -->
         <div class="text-center">
           <div class="video-container"></div>
@@ -34,14 +34,14 @@
         </div>
       </div>
         <!-- Where the sidebar will live -->
-      <div class="col-md-4 text-center sidebar-container">
+      <div class="col-md-5 offset-md-1 offset-xl-0 text-center sidebar-container">
       </div>
     </div>
   </div>
 
   <script id="video-template" type="text/x-handlebars-template">
     <div class="video text-center">
-      <iframe width="500" height="320" src="https://www.youtube.com/embed/{{video_id}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+      <iframe width="550" height="340" src="https://www.youtube.com/embed/{{video_id}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
     </div>
   </script>
 
@@ -53,8 +53,8 @@
   </script>
 
   <script id="sidebar-template" type="text/x-handlebars-template">
-    <div class="sidebar-item d-flex align-items-center col-sm-6 offset-md-1"><img class="img-fluid" src={{thumbnail}}></div>
-    <div class="sidebar-item d-flex align-items-center col-sm-5">{{title}}</div>
+    <div class="sidebar-item d-flex align-items-center col-md-5 offset-md-2"><img class="img-fluid" src={{thumbnail}}></div>
+    <div class="sidebar-item d-flex align-items-center col-md-5">{{title}}</div>
   </script>
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
