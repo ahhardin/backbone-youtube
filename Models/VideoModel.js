@@ -1,17 +1,19 @@
 var VideoModel = Backbone.Model.extend({
   defaults: {
+    extended: false,
     title: '',
     description: '',
     thumbnail: '',
     player: '',
     video_id: '',
     player: '',
-    expanded_description: ''
+    extended_description:''
   },
 
   parse: function(response) {
     if (this.urlRoot) {
-      var expanded_description = response.item[0].snippet.description;
+      var description = response.items[0].snippet.description;
+      return {'extended_description': description}
     } else {
       var title = response.snippet.title;
       var video_id = response.id.videoId;
@@ -21,8 +23,9 @@ var VideoModel = Backbone.Model.extend({
       return {
         'title': title,
         'video_id': video_id,
-        'description': description,
+        'short_description': description,
         'thumbnail': thumbnail,
+        'description': description
       }
     }
   }
